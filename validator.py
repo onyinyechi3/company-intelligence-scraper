@@ -1,12 +1,10 @@
 import pandas as pd
 
-DATA_PATH = "output/quotes_dataset.csv"
 
-def validate_dataset():
-
+def validate_dataset(file_path):
     print("Loading dataset...")
 
-    df = pd.read_csv(DATA_PATH)
+    df = pd.read_csv(file_path)
 
     print("\nDataset Overview")
     print("----------------")
@@ -27,5 +25,6 @@ def validate_dataset():
 
     print("\nValidation Complete.")
 
+
 if __name__ == "__main__":
-    validate_dataset()
+    validate_dataset("output/company_intelligence_dataset.csv")
